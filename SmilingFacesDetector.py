@@ -1,18 +1,8 @@
 ---------------------------------------------------------------------------------
 ### Project: SMILING FACES DETECTOR USING CNN - CONVOLUTIONAL NEURAL NETWORKS ###
 ---------------------------------------------------------------------------------
----------------------------------------------------
-### STEP 1: PROBLEM STATEMENT AND BUSINESS CASE ###
----------------------------------------------------
-'''
-    - The dataset contains a series of images that can be used to solve the Happy House problem!
-    - We need to build an artificial neural network that can detect smiling faces.
-    - Only smiling people will be allowed to enter the house!
-    - The train set has 600 examples. The test set has 150 examples.
-    - Data Source: https://www.kaggle.com/iarunava/happy-house-dataset
-'''
 ------------------------------
-### STEP 2: IMPORTING DATA ###
+### STEP 1: IMPORTING DATA ###
 ------------------------------
 # import libraries 
 import pandas as pd             # Import Pandas for data manipulation using dataframes
@@ -43,7 +33,7 @@ y_train
 y_train.shape
 
 ---------------------------------------------
-### STEP #3: VISUALIZATION OF THE DATASET ###
+### STEP 2: VISUALIZATION OF THE DATASET ###
 ---------------------------------------------
 i = random.randint(1,600) # select any random index from 1 to 600
 plt.imshow( X_train[i] )
@@ -77,7 +67,7 @@ for i in np.arange(0, W_grid * L_grid): #create evenly spaces variables
 plt.subplots_adjust(hspace=0.4)
 
 -----------------------------------
-### STEP 4: TRAINING THE MODEL ###
+### STEP 3: TRAINING THE MODEL ###
 -----------------------------------
 # Let's normalize dataset
 #maximum value is 255 within our data
@@ -153,7 +143,7 @@ history = cnn_model.fit(X_train,
                         verbose = 1)
 
 ------------------------------------
-### STEP 5: EVALUATING THE MODEL ###
+### STEP 4: EVALUATING THE MODEL ###
 ------------------------------------
 evaluation = cnn_model.evaluate(X_test, y_test)
 print('Test Accuracy : {:.3f}'.format(evaluation[1]))
