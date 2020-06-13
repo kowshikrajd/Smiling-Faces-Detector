@@ -1,5 +1,5 @@
 # Smiling-Faces-Detector
-PROBLEM STATEMENT AND BUSINESS CASE ###
+PROBLEM STATEMENT AND BUSINESS CASE
 ---------------------------------------------------
 
     - The dataset contains a series of images that can be used to solve the Happy House problem!
